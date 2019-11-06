@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h1>Listagem de Imagens</h1>
+{% for imagem in imagens %}
+<div class="card mb-3">
+    <div >{{imagem}}</div>
+</div>
+{% endfor %}
+
+<a href="{% url 'listar_imagens'%}">
+    <input type="button" class="btn btn-primary mb-3" value="Proxima">
+</a>
+{% endblock conteudo %}
